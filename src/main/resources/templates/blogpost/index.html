@@ -5,7 +5,7 @@
 		
 		<p>Please use the form below to submit a Blog Post:</p>
 		
-		<form th:action="@{/blogpost}" th:object="${blogPost}" method="post">
+		<form action="#" th:action="@{/blogpost}" th:object="${blogPost}" method="post">
 			<input type="text" th:field="*{name}" placeholder="Name" />
 			<input type="text" th:field="*{author}" placeholder="Author" />
 			<input type="text" th:field="*{body}" placeholder="Body" />
