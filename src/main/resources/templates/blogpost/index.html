@@ -1,7 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<body>
 		<h1>Blog Post Page</h1>
-
+		
+		<p>Please use the form below to submit a Blog Post:</p>
+		
+		<form th:action="@{/blogpost}" th:object="${blogPost}" method="post">
+			<input type="text" th:field="*{name}" placeholder="Name" />
+			<input type="text" th:field="*{author}" placeholder="Author" />
+			<input type="text" th:field="*{body}" placeholder="Body" />
+			<button type="submit">Submit</button>
+		</form>
+		
 	</body>
 </html>
