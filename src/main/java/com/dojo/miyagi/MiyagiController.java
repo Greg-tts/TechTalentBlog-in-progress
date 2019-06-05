@@ -1,7 +1,14 @@
 package com.dojo.miyagi;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.dojo.miyagi.blogPost.BlogPost;
+
 
 @Controller
 public class MiyagiController {

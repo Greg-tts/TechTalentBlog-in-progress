@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>	
+		<link href="css/style.css" rel="stylesheet" type="text/css">		
+	</head>
+	<body>
+		<h1>Blog Post Page</h1>
+		<a href="/blogpost/new">Create a new post</a>
+		<div class="row">
+		    <div th:each="post:${posts}">
+		        <div class="col-md-6">
+		            <div class="panel panel-default">
+						<div class="panel-heading">
+							<p th:text="${post.name}" />
+						</div>
+						<div class="panel-body">
+							<p th:text="${post.author}" />
+							<p th:text="${post.body}" />
+						</div>
+						<div class="panel-footer">
+							<!-- Link to Update -->
+							<!-- Link to Show  -->
+							<!-- Link to Destroy -->
+						</div>
+					</div>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>

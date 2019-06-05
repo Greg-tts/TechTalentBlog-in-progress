@@ -1,0 +1,39 @@
+#homeTitle{
+	margin-top:75px
+}
+nav{
+	position: fixed;
+    width: 100%;
+    text-align: center;
+    top: 20px;
+}
+nav a{
+	color:black;
+	background-color:white;
+	text-decoration:none;
+	padding:10px;
+	margin:10px;
+	border:solid;
+	transition:.333s;
+}
+nav a:hover{
+	color:white;
+	background-color:black;
+	border-radius:10px;
+}
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+	nav{
+	    top: initial;
+	    bottom:70px;
+	}
+	nav a{
+		font-size:3em;
+		padding:50px;		
+	}
+	
+}

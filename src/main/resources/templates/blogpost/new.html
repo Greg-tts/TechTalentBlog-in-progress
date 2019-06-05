@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+	<head>	
+		<link href="css/style.css" rel="stylesheet" type="text/css">		
+	</head>
 	<body>
-		<h1>Blog Post Page</h1>
-		
+		<h1>Blog Form</h1>		
 		<p>Please use the form below to submit a Blog Post:</p>
 		
 		<form action="#" th:action="@{/blogpost}" th:object="${blogPost}" method="post">
