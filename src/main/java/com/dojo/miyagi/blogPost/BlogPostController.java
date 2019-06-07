@@ -37,16 +37,8 @@ public class BlogPostController {
 		return "blogpost/blogPostHome";
 	}
 	
-	@PostMapping(value="/blogpost")
-	public String addNewBlogPost(BlogPost blogPost, Model model) {
-//		blogPostRepository.save(new BlogPost(blogPost.getName(), blogPost.getAuthor(), blogPost.getBody()));
-//		posts.add(blogPost);
-//		System.out.println(blogPost);
-//		model.addAttribute("name", blogPost.getName());
-//		model.addAttribute("author", blogPost.getAuthor());
-//		model.addAttribute("body", blogPost.getBody());
-//		return "blogpost/result";
-		
+	@PostMapping(value="/blogpost/new")
+	public String addNewBlogPost(BlogPost blogPost, Model model) {		
 		blogPostRepository.save(blogPost);
 		posts.add(blogPost);
 		model.addAttribute("postId", blogPost.getPostId());

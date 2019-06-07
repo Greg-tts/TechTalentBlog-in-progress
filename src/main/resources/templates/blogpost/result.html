@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-	<head>	
-		<link href="css/style.css" rel="stylesheet" type="text/css">		
-	</head>
-	<body>
-		<h1>Thank You</h1>
-		
-		<p>Blog Post:</p>
-		<p th:text="${postId}" />
-		<p th:text="${name}" />
-		<p th:text="${author}" />
-		<p th:text="${body}" />
-		
-		<a href="/blogpost">Homepage</a>
-		
-	</body>
+<head>
+		<title>Blog Site</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h1 th:text="${name}"></h1>
+				</div>
+				<div class="panel-body">
+					<strong><p th:text="${author}"/></strong>
+					<p th:text="${body}" />
+				</div>
+				<div class="panel-footer">
+					<!-- Link to Update -->
+					<!-- Link to Show  -->
+					<!--  Link to Destroy -->
+						<a th:href="@{/blogpost}"><button class="btn btn-success">Back To Home Page</button></a>
+						<a th:href="@{/blogpost/new}"><button class="btn btn-primary">Submit a New Blog Post</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+	<script src="../../webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>
+</body>
 </html>
