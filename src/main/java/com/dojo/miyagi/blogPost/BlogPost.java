@@ -22,6 +22,11 @@ public class BlogPost {
 		this.body = body;
 	}
 	
+	public Long getPostId()
+	{
+		return postId;
+	}
+	
 	public String getName() {
 		return name;
 	}
